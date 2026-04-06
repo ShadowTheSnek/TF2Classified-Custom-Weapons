@@ -5060,6 +5060,7 @@ Playtest weapon."
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+// StS (PL)'s weapons and weapon tweaks =3 (start)
 		"32137" // The Thermal Thruster - live tf2
 		{
 			"name"	"The Thermal Thruster"
@@ -5171,17 +5172,17 @@ Playtest weapon."
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"32138" // Fancy-Cat Pepper-Spray
+		"11101" // Fancy-Cat Pepper-Spray
 		{
 			"name"				"Fancy-Cat Pepper-Spray"
 			"item_name"			"Fancy-Cat Pepper-Spray"
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_description"	"Warning: ITEM IS MISSING 3 THINGS
 
-This is as close as I got to something a'la Machine gun for Pyro - StS (PL)
+This is as close as I got to something a'la rapidfire / Ivy's weapon for Pyro - StS (PL)
 
-Weapon concept by: 'StS (PL)'.
-Playtest weapon."
+Weapon by: 'StS (PL)'.
+Pyro Playtest weapon."
 			"item_quality"		"selfmade"
 
 			"item_class"	"tf2c_weapon_hunting_revolver"
@@ -5192,12 +5193,12 @@ Playtest weapon."
 			}
 			"attributes"
 			{
-				"max health additive bonus"
+			"max health additive bonus"
                 {
                     "attribute_class"    "add_maxhealth"
                     "value"                "5.0"
                 }
-				"hidden primary max ammo bonus"
+			"hidden primary max ammo bonus"
                 {
                     "attribute_class"    "mult_maxammo_primary"
                     "value"                "4"
@@ -5207,17 +5208,22 @@ Playtest weapon."
                     "attribute_class"    "mult_postfiredelay"
                     "value"                "0.22"
                 }
-				"ammo regen" // this leaks into secondary, is it intended? - tachy
+		"add ammo on kill" // It wasn't intended to leak, so I changed it to something nicer - StS (PL)
                 {
-                    "attribute_class"    "addperc_ammo_regen"
-                    "value"                "0.6"
+                    "attribute_class"    "add_ammo_on_kill"
+                    "value"                "4"
+                }
+		"instant reload on kill" // part 2 of that
+                {
+                    "attribute_class"    "instant_reload_on_kill"
+                    "value"                "8"
                 }
                 //"charged airblast" // Doesnt have the airblast implemented yet
                 //{
                     //"attribute_class"    "set_charged_airblast"
                     //"value"                "1"
                 //}
-				//"apply self knockback airblast" // Doesnt have the airblast implemented yet
+		//"apply self knockback airblast" // Doesnt have the airblast implemented yet
                 //{
                     //"attribute_class"    "apply_self_knockback_airblast"
                     //"value"                "1"
@@ -5232,7 +5238,7 @@ Playtest weapon."
                     "attribute_class"    "add_onkill_minicritboost_time"
                     "value"                "1"
                 }
-                "fire rate bonus with reduced health"
+               	 "fire rate bonus with reduced health"
                 {
                     "attribute_class"    "mult_postfiredelay_with_reduced_health"
                     "value"                "0.8"
@@ -5252,54 +5258,57 @@ Playtest weapon."
                     "attribute_class"    "mod_max_primary_clip_override"
                     "value"                "36"
                 }
-				"sniper no charge"
-				{
-					"attribute_class"	"unimplemented_mod_sniper_no_charge"
-					"value"				"1"
-				}
-				"sniper no headshots"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"				"1"
-				}
-				"sniper zoom penalty"
-				{
-					"attribute_class"	"mult_zoom_fov"
-					"value"				"0.3"
-				}
-				"custom rampup"
-				{
-					"attribute_class"	"mod_custom_rampup"
-					"value"				"2.5"
-				}
-				"hidden separator"	"1"
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"				"0.2"
-				}
-				// move these one once you get it working - tachy
-                "accuracy scales damage" // does this even work??? - tachy
+		"custom rampup"
+		{
+			"attribute_class"	"mod_custom_rampup"
+			"value"				"2.5"
+		}
+                "accuracy scales damage"
                 {
-                    "attribute_class"    "accuracy_scales_damage"
-                    "value"                "1.15"
+                    	"attribute_class"    "accuracy_scales_damage"
+                    	"value"                "1.15"
                 }
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"0.5"
-				}
-				"weapon burn time increased" //This doesnt want to make the afterburn longer for some reason, it's like lighting up a pyro with a flaregun (one tick) still
-				{
-					"attribute_class"	"mult_wpn_burntime"
-					"value"				"2"
-				}
-				//"bullets per shot bonus" // I cant figure out how to decrease the accuracy to be closer to a SMG/Minigun, so this needs to be commented out for now
-				//{
-					//"attribute_class"	"mult_bullets_per_shot"
-					//"value"				"1.05"
-				//}
-			}
+
+	"hidden separator"	"1"
+		"sniper no charge"
+		{
+			"attribute_class"	"unimplemented_mod_sniper_no_charge"
+					"value"				"1"
+		}
+		"sniper no headshots"
+		{
+			"attribute_class"	"set_weapon_mode"
+			"value"				"1"
+		}
+		"sniper zoom penalty"
+		{
+			"attribute_class"	"mult_zoom_fov"
+			"value"				"0.3"
+		}
+		"damage penalty"
+		{
+			"attribute_class"	"mult_dmg"
+			"value"				"0.2"
+		}
+
+		// move these one once you get it working - tachy
+
+		"spread penalty"
+		{
+			"attribute_class"	"mult_spread_scale"
+			"value"				"1.5"
+		}
+		"weapon burn time increased" //This doesnt want to make the afterburn longer for some reason, it's like lighting up a pyro with a flaregun (one tick) still
+		{
+			"attribute_class"	"mult_wpn_burntime"
+			"value"				"2"
+		}
+		//"bullets per shot bonus" // I cant figure out how to decrease the accuracy to be closer to a SMG/Minigun, so this needs to be commented out for now
+		//{
+			//"attribute_class"	"mult_bullets_per_shot"
+			//"value"				"1.05"
+		//}
+	}
 
 			"model_world"				"models/weapons/w_models/w_revrifle_sniper.mdl"
 			"model_player"				"models/weapons/v_models/v_revrifle_sniper.mdl"
@@ -5339,5 +5348,216 @@ Playtest weapon."
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 		}
+// My Sun-on-a-stick tweak (pyro)
+
+		"11103" // StS' Sun-on-a-Stick (pyro)
+		{
+			"name"	"Sun-on-a-Stick"
+			"item_class"	"tf_weapon_bat"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RiftFireMace"
+			"item_name"	"#TF_Unique_RiftFireMace"
+			//"item_description"	"#TF_RiftFireMace_Desc // Original Desc
+			"item_description"	"Spiky end goes into other man
+
+Tweak by: 'StS (PL)'.
+Scout/Pyro Playtest weapon."
+			"item_slot"	"melee"
+			"item_logname"	"lava_bat"
+			"item_iconname"	"lava_bat"
+			"item_quality"	"selfmade"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_rift_fire_mace/c_rift_fire_mace"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"55"
+			"model_player"	"models/workshop/weapons/c_models/c_rift_fire_mace/c_rift_fire_mace.mdl"
+			"attach_to_hands"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -6"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+                		"Set DamageType Ignite"
+                		{
+                   		 "attribute_class"    "set_dmgtype_ignite"
+                  		  "value"                "1"
+                		}
+                		"damage bonus vs burning"
+                		{
+                   			 "attribute_class"    "mult_dmg_vs_burning"
+                  			  "value"                "1.15"
+                		}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.85"
+				}
+				"dmg penalty vs nonburning"
+				{
+					"attribute_class"	"mult_dmg_vs_nonburning"
+					"value"	"0.8"
+				}
+			"hidden separator"	"1"
+				"weapon burn time reduced"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"			"0.4"
+				}
+				"weapon burn dmg reduced"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value"			"1"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"			"0.9"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"			"1.2"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"		"Weapon_Fishwhacker.HitWorld"
+				"sound_melee_miss"		"Weapon_Machete.Miss"
+				"sound_burst"			"Weapon_Machete.MissCrit"
+			}
+		}
+// My Sun-on-a-stick tweak (scout)
+
+		"11104" // StS' Sun-on-a-Stick (scout)
+		{
+			"name"	"Sun-on-a-Stick"
+			"item_class"	"tf_weapon_bat"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RiftFireMace"
+			"item_name"	"#TF_Unique_RiftFireMace"
+			//"item_description"	"#TF_RiftFireMace_Desc // Original Desc
+			"item_description"	"Spiky end goes into other man
+
+Tweak by: 'StS (PL)'.
+Scout/Pyro Playtest weapon."
+			"item_slot"	"melee"
+			"item_logname"	"lava_bat"
+			"item_iconname"	"lava_bat"
+			"item_quality"	"selfmade"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_rift_fire_mace/c_rift_fire_mace"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"55"
+			"model_player"	"models/workshop/weapons/c_models/c_rift_fire_mace/c_rift_fire_mace.mdl"
+			"attach_to_hands"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -6"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+                		"Set DamageType Ignite"
+                		{
+                   		 "attribute_class"    "set_dmgtype_ignite"
+                  		  "value"                "1"
+                		}
+                		"damage bonus vs burning"
+                		{
+                   			 "attribute_class"    "mult_dmg_vs_burning"
+                  			  "value"                "1.15"
+                		}
+				"dmg taken from fire reduced on active"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire_active"
+					"value"			"0.8"
+				}
+				"dmg taken from fire increased"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"			"1.2"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
+				}
+				"dmg penalty vs nonburning"
+				{
+					"attribute_class"	"mult_dmg_vs_nonburning"
+					"value"	"0.8"
+				}
+			"hidden separator"	"1"
+				"weapon burn time reduced"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"			"0.25"
+				}
+				"weapon burn dmg reduced"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value"			"0.5"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"			"0.9"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"			"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"		"Weapon_Fishwhacker.HitWorld"
+				"sound_melee_miss"		"Weapon_Machete.Miss"
+				"sound_burst"			"Weapon_Machete.MissCrit"
+			}
+		}
+// StS (PL)'s weapons and weapon tweaks =3 (end)
 	}
 }
