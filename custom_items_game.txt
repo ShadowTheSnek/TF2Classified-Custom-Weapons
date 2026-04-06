@@ -1070,95 +1070,6 @@ Playtest weapon."
 				}
 			}
 		}
-		"1179" // The Thermal Thruster
-		{
-			"name"	"The Thermal Thruster"
-			"item_class"			"tf_weapon_rocketpack"
-			"item_logname"	"rocketpack"
-			"item_iconname"	"rocketpack"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_RocketPack"
-			"item_name"			"#TF_ThermalThruster"
-			"item_description"	"Death from above! Fires up to 2 short-duration blasts that launches the Pyro in the direction they are aiming.
-
-Weapon by: 'Tachy'.
-Playtest weapon."
-			"item_slot"			"secondary"
-			"equip_region"		"back"
-			"anim_slot"			"ITEM4"
-			"image_inventory"	"backpack/weapons/c_models/c_rocketpack/c_rocketpack"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"60"			
-			"model_player"	"models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
-			"attach_to_hands"	"1"
-			"attach_to_hands_vm_only"	"1"
-			"extra_wearable" "models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
-			"item_quality"	"selfmade"
-			"propername"	"1"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"backpack"		"1"
-				}
-			}
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"	
-				"damage force increase hidden"	"1.5"
-				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
-				"taunt attack time"		"4.7"
-				"item_meter_charge_type"						"1"
-				"item_meter_charge_rate"			"30"
-				"holster_anim_time"		"0.8"
-				"falling_impact_radius_pushback"	"1"
-				"thermal_thruster"					"1"
-			}
-			"attributes"
-			{
-				"thermal_thruster_air_launch"
-				{
-					"attribute_class"	"thermal_thruster_air_launch"
-					"value"				"1"
-				}
-				"boots falling stomp"
-				{
-					"attribute_class"	"boots_falling_stomp"
-					"value"				"1"
-				}
-				"dmg taken increased"
-				{
-					"attribute_class"	"mult_dmgtaken_active"
-					"value"				"1.15"
-                }
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"pyro"	"scenes/player/pyro/low/taunt_gasblast.vcd"
-				}
-				"custom_taunt_prop_per_class"
-				{
-					"pyro"	"models/player/items/taunts/matchbox/matchbox.mdl"
-				}
-			}
-			"visuals_red"
-			{
-				"skin" "0"
-			}
-			"visuals_blu"
-			{
-				"skin" "1"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
 		"810"
 		{
 			"name"	"The Red-Tape Recorder"
@@ -5030,7 +4941,237 @@ Playtest weapon."
 				}
 			}
 		}
-		"32137" // Fancy-Cat Pepper-Spray
+		"30050"
+		{
+			"name"			"The Cozy Camper"
+			"item_class"		"tf_wearable"
+			"show_in_armory"	"1"
+			"item_type_name" 	"#TF_Wearable_Backpack"
+			"item_name"	"#TF_CozyCamper"
+			"item_description"	"Feels great, doesn't it?
+
+Weapon by: 'Gigachad Gaming'.
+Playtest weapon."
+			"item_slot"		"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"FORCE_NOT_USED"
+			"item_quality"		"selfmade"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"image_inventory"	"backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.mdl"
+			"extra_wearable" "models/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.mdl"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"attributes"
+			{
+				"maxammo metal increased"
+				{
+					"attribute_class"	"mult_maxammo_metal"
+					"value"	"1.5"
+				}
+				"engy sentry turn rate bonus"
+				{
+					"attribute_class"	"mult_sentry_turnrate"
+					"value"	"1.25"
+				}
+				"slower dispenser build speed"
+				{
+					"attribute_class"	"mod_giga_slower_dispenser_build_speed_explain"
+					"value"				"0.5"
+				}
+				"slower jumppad build speed"
+				{
+					"attribute_class"	"mod_giga_slower_jumppad_build_speed_explain"
+					"value"				"0.5"
+				}
+				"hidden separator"	"1"
+				"engineer jumppad build rate multiplier"
+				{
+					"attribute_class"	"jumppad_build_rate_multiplier"
+					"value"	"0.5"
+				}
+				"engineer dispenser build rate multiplier"
+				{
+					"attribute_class"	"dispenser_build_rate_multiplier"
+					"value" "0.5"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"30051"
+		{
+			"enabled"		"1"
+			"name"			"engipassive"
+			"item_class"		"tf_wearable"
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" 	"Passive buffs"
+			"item_name"		"Passive-ist"
+			"item_description" "Why don't we take a break from the shotgun, partner?
+
+Weapon by: 'Gigachad Gaming'.
+Playtest weapon."
+			"item_slot"		"primary"
+			"equip_region"	"shirt"
+			"anim_slot"		"FORCE_NOT_USED"
+			"item_quality"		"selfmade"
+			"propername"	"1"
+			"min_ilevel"		"1"
+			"max_ilevel"		"99"
+			"image_inventory"	"backpack/workshop/player/items/all_class/cltf2_gold/cltf2_gold"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/player/items/engineer/cave_beard.mdl"
+			"act_as_wearable" "1"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"					"1.15"
+				}
+				"engy sentry knockback bonus"
+				{
+					"attribute_class"	"mult_sentry_knockback"
+					"value"	"1.3"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"					"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"32137" // The Thermal Thruster - live tf2
+		{
+			"name"	"The Thermal Thruster"
+			"item_class"			"tf_weapon_rocketpack"
+			"item_logname"	"rocketpack"
+			"item_iconname"	"rocketpack"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RocketPack"
+			"item_name"			"#TF_ThermalThruster"
+			"item_description"	"Death from above! Fires a short-duration blast that launches the Pyro in the direction they are aiming. Deal 3x falling damage to anyone you land on!
+
+Weapon concept by: 'StS (PL)'.
+Playtest weapon."
+			"item_slot"			"secondary"
+			"equip_region"		"back"
+			"anim_slot"			"ITEM4"
+			"image_inventory"	"backpack/weapons/c_models/c_rocketpack/c_rocketpack"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"60"			
+			"model_player"	"models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
+			"attach_to_hands"	"1"
+			"attach_to_hands_vm_only"	"1"
+			"extra_wearable" "models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
+			"item_quality"	"selfmade"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+				}
+			}
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"	
+				"damage force increase hidden"	"1.5"
+				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
+				"taunt attack time"		"4.7"
+				"item_meter_charge_type"						"1"
+				"item_meter_charge_rate"			"33"
+				"holster_anim_time"		"0.5"
+				"falling_impact_radius_pushback"	"1"
+				"thermal_thruster"					"1"
+			}
+			"attributes"
+            {
+                "thermal_thruster_air_launch"
+                {
+                    "attribute_class"    "thermal_thruster_air_launch"
+                    "value"                "1"
+                }
+				"provide on active" // Provide when active
+				{
+					"attribute_class"    "provide_on_active"
+                    "value"                "1"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"    "boots_falling_stomp"
+                    "value"                "1.05"
+				}
+				"mult_player_movespeed_active"
+				{
+					"attribute_class"    "mult_player_movespeed_active"
+                    "value"                "1.05"
+				}
+				"increased air control"
+				{
+					"attribute_class"    "mod_air_control"
+                    "value"                "1.25"
+				}
+				"dmg taken increased"
+				{
+					"attribute_class"    "mult_dmgtaken"
+                    "value"                "1.1"
+				}
+				"hide ammo hud"
+				{
+					"attribute_class"    "hide_ammo_hud"
+                    "value"                "1"
+				}
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"pyro"	"scenes/player/pyro/low/taunt_gasblast.vcd"
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"pyro"	"models/player/items/taunts/matchbox/matchbox.mdl"
+				}
+			}
+			"visuals_red"
+			{
+				"skin" "0"
+			}
+			"visuals_blu"
+			{
+				"skin" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"32138" // Fancy-Cat Pepper-Spray
 		{
 			"name"				"Fancy-Cat Pepper-Spray"
 			"item_name"			"Fancy-Cat Pepper-Spray"
@@ -5039,7 +5180,7 @@ Playtest weapon."
 
 This is as close as I got to something a'la Machine gun for Pyro - StS (PL)
 
-Weapon by: 'StS (PL)'.
+Weapon concept by: 'StS (PL)'.
 Playtest weapon."
 			"item_quality"		"selfmade"
 
@@ -5197,125 +5338,6 @@ Playtest weapon."
 			"image_inventory"		"backpack/weapons/w_models/w_revrifle"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"			"ui/item_heavy_gun_drop.wav"
-		}
-		"30050"
-		{
-			"name"			"The Cozy Camper"
-			"item_class"		"tf_wearable"
-			"show_in_armory"	"1"
-			"item_type_name" 	"#TF_Wearable_Backpack"
-			"item_name"	"#TF_CozyCamper"
-			"item_description"	"Feels great, doesn't it?
-
-Weapon by: 'Gigachad Gaming'.
-Playtest weapon."
-			"item_slot"		"secondary"
-			"equip_region"	"back"
-			"anim_slot"	"FORCE_NOT_USED"
-			"item_quality"		"selfmade"
-			"propername"		"1"
-			"min_ilevel"		"10"
-			"max_ilevel"		"10"
-			"image_inventory"	"backpack/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.mdl"
-			"extra_wearable" "models/workshop/player/items/sniper/xms_sniper_commandobackpack/xms_sniper_commandobackpack.mdl"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"attributes"
-			{
-				"maxammo metal increased"
-				{
-					"attribute_class"	"mult_maxammo_metal"
-					"value"	"1.5"
-				}
-				"engy sentry turn rate bonus"
-				{
-					"attribute_class"	"mult_sentry_turnrate"
-					"value"	"1.25"
-				}
-				"slower dispenser build speed"
-				{
-					"attribute_class"	"mod_giga_slower_dispenser_build_speed_explain"
-					"value"				"0.5"
-				}
-				"slower jumppad build speed"
-				{
-					"attribute_class"	"mod_giga_slower_jumppad_build_speed_explain"
-					"value"				"0.5"
-				}
-				"hidden separator"	"1"
-				"engineer jumppad build rate multiplier"
-				{
-					"attribute_class"	"jumppad_build_rate_multiplier"
-					"value"	"0.5"
-				}
-				"engineer dispenser build rate multiplier"
-				{
-					"attribute_class"	"dispenser_build_rate_multiplier"
-					"value" "0.5"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
-			"drop_sound"		"ui/item_pack_drop.wav"
-		}
-		"30051"
-		{
-			"enabled"		"1"
-			"name"			"engipassive"
-			"item_class"		"tf_wearable"
-			"loadondemand" "1"
-			"show_in_armory"	"1"
-			"item_type_name" 	"Passive buffs"
-			"item_name"		"Passive-ist"
-			"item_description" "Why don't we take a break from the shotgun, partner?
-
-Weapon by: 'Gigachad Gaming'.
-Playtest weapon."
-			"item_slot"		"primary"
-			"equip_region"	"shirt"
-			"anim_slot"		"FORCE_NOT_USED"
-			"item_quality"		"selfmade"
-			"propername"	"1"
-			"min_ilevel"		"1"
-			"max_ilevel"		"99"
-			"image_inventory"	"backpack/workshop/player/items/all_class/cltf2_gold/cltf2_gold"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"		"models/player/items/engineer/cave_beard.mdl"
-			"act_as_wearable" "1"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"attributes"
-			{
-				"move speed bonus"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"					"1.15"
-				}
-				"engy sentry knockback bonus"
-				{
-					"attribute_class"	"mult_sentry_knockback"
-					"value"	"1.3"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"					"1"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 	}
 }
