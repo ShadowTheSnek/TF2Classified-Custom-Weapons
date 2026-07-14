@@ -71,5 +71,177 @@
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"			"ui/item_bottle_drop.wav"
 		}
-	}
-}
+
+		"40001"
+		{
+			"name"				"heavy_sniper_weapon"
+			"item_name"			"Lens Breaker"
+			"item_type_name"	"#TF_Weapon_Minigun"
+			"item_description"	"Engineered in Mann Co.'s 'Worst Case Scenario' division. Sit back and line up your entire magazine. Fair is fair."
+			"propername"		"1"
+			
+			"item_quality"		"normal"
+			
+			"item_logname"		"heavy_sniper_weapon"
+			"item_iconname"		"aa_cannon"
+			
+			"item_class"		"tf_weapon_minigun"
+			
+			"item_slot"			"primary"
+			"anim_slot"			"primary"
+			
+			"model_world"			"models/weapons/w_models/w_aagun.mdl"
+			"model_player"			"models/weapons/v_models/v_aagun_heavy.mdl"
+			"image_inventory"		"backpack/weapons/w_models/w_aagun"
+			"mouse_pressed_sound"	"ui/item_heavier_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavier_gun_drop.wav"
+			
+			"attach_to_hands"		"1"
+
+			"used_by_classes"
+			{
+				"Heavy"			"1"
+			}
+
+			"attributes"
+			{
+				"mini_crits_snipers_visible"
+				{
+					"attribute_class"		"minicrit_vs_class"
+					"value"					"2"
+				}
+				"weapon spread bonus"
+				{
+					"value" "0.65"
+				}
+				"headshot immunity"
+				{
+					"value" "1"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class" "mult_minigun_spinup_time"
+					"value" "1.28"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" "mult_postfiredelay"
+					"value"	"1.65"
+				}
+				"dmg taken from bullets reduced"
+				{
+					"value" "1.1"
+				}
+				"maxammo primary reduced"
+				{ "value" "0.8" }
+				"hidden separator"	"1"
+				"no damage falloff over distance"
+				{
+					"attribute_class" "mod_no_dmg_falloff"
+					"value" "1"
+				}
+				"banned in medieval mode"
+				{
+					"attribute_class" "banned_in_medieval_mode"
+					"value" "1"
+				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"				"1.3"
+				}
+				"damage bonus HIDDEN"
+				{ "value" "1.3" }
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Winger.Single"
+				"sound_burst"			"Weapon_Winger.SingleCrit"
+			}
+		} // End of heavy_sniper_weapon
+
+		"40002"
+		{
+			"name"				"heavy_kevlar_secondary"
+			"item_name"			"Frontline Fortress"
+			"item_type_name"	"Body Armor"
+			"item_description" 	"Is very good vest. Bullet hit vest, vest say 'Nyet'. Bullet fall down, cry like baby. -Misha"
+			"propername"		"1"
+			
+			"item_quality"		"normal"
+			
+			"item_logname"		"heavy_kevlar_suit"
+			"item_iconname"		"aa_cannon"
+			
+			"item_class"		"tf_wearable"
+			"anim_slot"			"FORCE_NOT_USED"
+			"equip_region"		"shirt"
+			"act_as_wearable"	"1"
+			
+			"item_slot"			"secondary"
+			"used_by_classes"
+			{ "Heavy"	"1" }
+			
+			"model_player"		"models/weapons/c_models/c_rocketboots_soldier.mdl"
+			"image_inventory"		"backpack/weapons/c_models/c_rocketboots_soldier"
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"			"ui/item_metal_weapon_drop.wav"
+
+			"attributes"
+			{
+				"max health additive bonus"
+				{ "value" "100" }
+				"move speed penalty"
+				{ "value" "0.9" }
+				"health from healers reduced"
+				{ "value" "0.67" }
+				"dmg taken from bullets reduced"
+				{ "value" "1.2" }
+				"health regen"
+				{ "value" "10" }
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+		} // End of heavy_kevlar_secondary
+
+	} // End of items
+
+	"attributes"
+	{
+		"40001"
+		{
+			"name" "mini_crits_snipers_visible"
+			"attribute_class" "minicrit_vs_class"
+			"description_format" "value_is_additive"
+			"effect_type" "positive"
+			"stored_as_integer" "1"
+			"description_string" "Mini-Crits Snipers"
+		}
+		"40002"
+		{
+			"name" 					"headshot immunity"
+			"attribute_class" 		"no_death_from_headshots"
+			"description_string" 	"#Attrib_NoDeathFromHeadshots"
+			"description_format" 	"value_is_additive"
+			"effect_type" 			"positive"
+			"stored_as_integer"		"0"
+		}
+		"40003"
+		{
+			"name" 					"lunchbox gives ten seconds of crit"
+			"attribute_class" 		"lunchbox_addcond"
+			"description_string" 	"On Eat: Gain 10 Seconds of Crit Boost"
+			"description_format" 	"value_is_additive"
+			"effect_type" 			"positive"
+			"hidden"				"0"
+			"stored_as_integer"		"0"
+		}
+	} // End of attributes
+} // End of items_game
