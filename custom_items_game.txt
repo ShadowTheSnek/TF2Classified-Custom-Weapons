@@ -144,11 +144,11 @@
 				"dmg bonus vs buildings"
 				{
 					"attribute_class"	"mult_dmg_vs_buildings"
-					"value"				"1.3"
+					"value"				"1.2"
 				}
 				"damage bonus HIDDEN"
 				{
-					"value"				"1.3"
+					"value"				"1.2"
 				}
 			}
 			"static_attrs"
